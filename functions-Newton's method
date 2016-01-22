@@ -1,0 +1,2 @@
+;; racket module that calculates Newton's method in calculus.
+(provide Newton's_method)
