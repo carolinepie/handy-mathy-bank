@@ -1,2 +1,27 @@
-;; racket module that calculates Newton's method in calculus.
-(provide Newton's_method)
+XXXXX INTERFACE NEEDS DOUBLE-CHECKING!! CONTRACT NEEDS TO BE REVISITED!!! 
+
+
+#lang racket
+
+;; module for running Newton's method
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; INTERFACE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(provide Newtons_method)
+
+;; (Newtons_method fn dfn/dx start n) produces the approximation of a root of the
+;; given fn after applying Newton's method using derivative of given fn, dfn/dx,
+;; for n times starting at given start point
+;; Newtons_method: (Num Num..??) (Num Num..??) Num Nat -> Num
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; IMPLEMENTATION ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(define (Newtons_method_acc fn dfn/dx start n)
+      (cond
+        [(= 0 n) start]
+        [else
+         (Newtons_method_acc fn 
+                             dfn/dx
+                             (- start (/ (start fn)
+                                         (start dfn/dx)))
+                                (sub1 n))]))
