@@ -5,4 +5,4 @@
 ;; This file would be written in full Racket. 
 ;; This is how the user would interact with functions in other files.
 ;; This is the main module that searches for and calls the function the user needs.
-;; Updated version in Pyhton coming soon.
+;; Updated version in Python coming soon.
