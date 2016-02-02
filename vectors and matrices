@@ -1,0 +1,4 @@
+#lang racket
+
+;; NEED UPDATE
+;; IDEAS: MATRIX MULTIPLICATION; DOT-PRODUCT; CROSS PRODUCT; RREF (gonna be hard, but should be possible?); 
